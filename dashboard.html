@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Risk Register - Admin</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Risk register Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- system top header here -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- meu toggle and system name here -->
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+
+      <a href="#" class="logo d-flex align-items-center">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <span class="d-none d-lg-block"> Risk Register</span>
+      </a>
+    </div>
+
+    <!-- the seacrch input here -->
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div>
+
+    <!-- the top navigation here -->
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 1 new notifications
+              <!-- <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a> -->
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Risk register</h4>
+                <p>Check out security...</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+          </ul>
+
+        </li>
+        
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/jozee.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Alpha Jozee</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Alpha Jozee</h6>
+              <span>Adminstrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- the system sidebar here -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <!-- the dashboard link here -->
+      <li class="nav-item ">
+        <a class="nav-link collapsed " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <!-- Company drop down Nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#companies" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Companies</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="companies" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="companies.html">
+              <i class="bi bi-circle"></i><span>All Companies</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Branched Companies</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Blocked Companies</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the Branches drop down nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#branches" data-bs-toggle="collapse" href="#">
+          <i class="bx bx-git-branch"></i><span>Branches</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="branches" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Add New Branch</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>All Branches</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Blocked Branches</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the Cartegories drop down nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#cartegories" data-bs-toggle="collapse" href="#">
+          <i class="bx bx-list-check"></i><span>Categories</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="cartegories" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Add New Category</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>All Categories</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Branch Categories</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the Users drop down nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#users" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="users" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Add New User</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Company Coodinators</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Branch Coodinators</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Risk Champions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Risk Owners</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the Risks drop down nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#risks" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Risks</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="risks" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Register New Risk</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>All Risks</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the Reports drop down nav here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Reports</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Category Report</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Branch-Category Report</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>General Company Report</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <!-- the link to profile here -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-person"></i>
+          <span>My Profile</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle d-flex justify-content-between">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Admin</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <!-- the companies counts -->
+        <div class="col-xxl-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <span class="text-success small pt-1 fw-bold">1000</span> <span class="text-muted small pt-2 ps-1">Total </span>
+                </div>
+                <h5 class="card-title">Companies </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xxl-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <span class="text-success small pt-1 fw-bold">1000</span> <span class="text-muted small pt-2 ps-1">Total </span>
+                </div>
+                <h5 class="card-title">Branches </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xxl-4 col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="">
+                  <span class="text-success small pt-1 fw-bold">1000</span> <span class="text-muted small pt-2 ps-1">Total </span>
+                </div>
+                <h5 class="card-title">Users </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Latest Companies</h5>
+
+              <!-- Companies table with stripped rows -->
+              <table class="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Company</th>
+                    <th scope="col" class="d-none d-md-table-cell">Coodinator</th>
+                    <th scope="col" class="d-none d-md-table-cell">Region</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Institute of Finance Management</td>
+                    <td class="d-none d-md-table-cell">Alphaxad Jozee</td>
+                    <td class="d-none d-md-table-cell">Mwanza</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Institute of Finance Management</td>
+                    <td class="d-none d-md-table-cell">Alphaxad Jozee</td>
+                    <td class="d-none d-md-table-cell">Mwanza</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Institute of Finance Management</td>
+                    <td class="d-none d-md-table-cell">Alphaxad Jozee</td>
+                    <td class="d-none d-md-table-cell">Mwanza</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Institute of Finance Management</td>
+                    <td class="d-none d-md-table-cell">Alphaxad Jozee</td>
+                    <td class="d-none d-md-table-cell">Mwanza</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Latest Users</h5>
+              <!-- coodinators table with stripped rows -->
+              <table class="table table-striped text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" >Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alphaxad Jozee</td>
+                    <td>Coodinator</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alphaxad Jozee</td>
+                    <td>Coodinator</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alphaxad Jozee</td>
+                    <td>Coodinator</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Alphaxad Jozee</td>
+                    <td>Coodinator</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Risk register Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
